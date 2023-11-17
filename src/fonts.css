@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Fontsping-DEMO-proximanova-black';
+    src: url('./Font/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-blackit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-blackit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
