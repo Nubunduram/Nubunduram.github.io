@@ -14,12 +14,15 @@ module.exports = {
         reddefault: "#C20034",
       },
       width: {
+        '75': '18.75rem',
+        '50': '12.5rem',
         '33': '8.35rem',
         '18.45': '4.613rem',
       },
       fontSize: {
         '2xs': '0.625rem',
-        '3xs': '0.5rem',
+        '3xs': '0.563rem',
+        '4xs': '0.5rem',
       },
       rotate: {
         '30': '30deg',
@@ -29,6 +32,9 @@ module.exports = {
       fontFamily: {
         proxima: ['Fontspring-DEMO-proximanova', 'sans'],
       },
+      borderRadius: {
+        '10': '10px',
+      },
     },
   },
   purge: {
@@ -37,7 +43,7 @@ module.exports = {
     ],
     options: {
       safelist: [
-        'bg-pinkdefault', 'bg-graydefault', 'bg-reddefault',
+        'bg-pinkdefault', 'bg-graydefault', 'bg-reddefault', 'border-graydefault',
         'text-pinkdefault', 'text-graydefault', 'text-reddefault',
       ],
     },

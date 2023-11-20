@@ -2,9 +2,11 @@ import './App.css';
 import { useState } from 'react';
 import Top from './Components/Top';
 import Mid from './Components/Mid';
+import Mid3 from './Components/Mid3';
 import Bot from './Components/Bot';
 import item1 from './Components/Assets/item1.png';
 import item2 from './Components/Assets/item2.png';
+import App2 from './App2';
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
     }
   ]);
 
+  const [pageNum, setPageNum] = useState(1);
+
   const updateCartItem = (updatedItem) => {
     setCartItems((prevCartItems) =>
       prevCartItems.map((item) =>
@@ -41,13 +45,29 @@ function App() {
     setCartItems([]);
   };
 
-  return (
-    <div className="App flex justify-center flex-col mx-16 my-20">
-      <Top />
+  const updatePageNum = (newPageNum) => {
+    setPageNum(newPageNum);
+  };
+
+  return pageNum === 1 ? (
+    <div className="flex justify-center flex-col mx-16 my-20">
+      <Top pageTitle="My items" pageName="Checkout" updatePageNum={updatePageNum}/>
       <Mid cartItems={cartItems} setCartItems={setCartItems} removeAllItems={removeAllItems} updateCartItem={updateCartItem} />
-      <Bot cartItems={cartItems} />
+      <Bot cartItems={cartItems} pageNum={pageNum} updatePageNum={updatePageNum}/>
     </div>
-  );
+  ) : pageNum === 2 ? (  
+    <div>
+      <App2 pageNum={pageNum} updatePageNum={updatePageNum} />
+    </div>    
+  ) : pageNum === 3 ? (
+    <div className='items-center flex justify-center flex-col my-20'>
+      <Top pageTitle="Shipping Method" pageName="Shipping" updatePageNum={updatePageNum}/>
+      <Mid3 />
+      <Bot cartItems={cartItems} pageNum={pageNum} updatePageNum={updatePageNum}/>
+    </div>
+  ) : (
+    null
+  )
 }
 
 export default App;

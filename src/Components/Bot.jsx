@@ -1,11 +1,11 @@
 import React from 'react';
 import NextPageButton from './BotComp/NextPageButton';
 
-const Bot = ( { cartItems }) => {
+const Bot = ( { cartItems, pageNum, updatePageNum }) => {
   
   return (
-    <div className='mt-10 bg-red-100'>
-      <NextPageButton cartItems={cartItems} />
+    <div className=''>
+      <NextPageButton cartItems={cartItems} pageNum={pageNum} updatePageNum={updatePageNum}/>
     </div>
   );
 }

@@ -6,8 +6,330 @@
 }
 
 @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-blackit';
+    src: url('./Font/Fontspring-DEMO-proximanova-blackit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-bold';
+    src: url('./Font/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-boldit';
+    src: url('./Font/Fontspring-DEMO-proximanova-boldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-extrabold';
+    src: url('./Font/Fontspring-DEMO-proximanova-extrabold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-extraboldit';
+    src: url('./Font/Fontspring-DEMO-proximanova-extraboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-light';
+    src: url('./Font/Fontspring-DEMO-proximanova-light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-lighit';
+    src: url('./Font/Fontspring-DEMO-proximanova-lightit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-medium';
+    src: url('./Font/Fontspring-DEMO-proximanova-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-mediumit';
+    src: url('./Font/Fontspring-DEMO-proximanova-mediumit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-regular';
+    src: url('./Font/Fontspring-DEMO-proximanova-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-regularit';
+    src: url('./Font/Fontspring-DEMO-proximanova-regularit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-semibold';
+    src: url('./Font/Fontspring-DEMO-proximanova-semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-semiboldit';
+    src: url('./Font/Fontspring-DEMO-proximanova-semiboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-thin';
+    src: url('./Font/Fontspring-DEMO-proximanova-thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanova-thinit';
+    src: url('./Font/Fontspring-DEMO-proximanova-thinit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-black';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: 'Fontspring-DEMO-proximanovacond-blackit';
     src: url('./Font/Fontspring-DEMO-proximanovacond-blackit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-bold';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-boldit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-boldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-extrabold';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-extrabold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-extraboldit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-extraboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-light';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-lightit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-lightit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-medium';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-mediumit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-mediumit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-regular';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-regularit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-regularit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-semibold';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-semiboldit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-semiboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-thin';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovacond-thinit';
+    src: url('./Font/Fontspring-DEMO-proximanovacond-thinit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-black';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-blackit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-blackit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-bold';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-boldit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-boldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-extrabold';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-extrabold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-extraboldit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-extraboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-light';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-lightit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-lightit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-medium';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-mediumit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-mediumit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-regular';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-regularit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-regularit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-semibold';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-semiboldit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-semiboldit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-thin';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fontspring-DEMO-proximanovaexcn-thinit';
+    src: url('./Font/Fontspring-DEMO-proximanovaexcn-thinit.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }

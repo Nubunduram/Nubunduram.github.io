@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Title = () => {
+const Title = ( { pageTitle } ) => {
   return (
     <div className='font-medium text-base mt-12'>
-      My Items
+      {pageTitle}
     </div>
   )
 }

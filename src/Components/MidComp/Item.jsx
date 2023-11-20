@@ -32,11 +32,17 @@ const Item = ({ itemName, itemPic, stock, itemColor, defaultItemPrice, removeIte
     removeItem(itemName);
   };
 
-  console.log(itemColor)
+  const openOriginalImage = () => {
+    window.open(itemPic, '_blank');
+  };
 
   return (
     <div className='mb-6 flex justify-between'>
-      <img className='w-33 h-100 rounded-lg' src={itemPic} alt={itemName} />
+      <img 
+      className='cursor-pointer w-33 h-100 rounded-lg' 
+      src={itemPic} 
+      alt={itemName}
+      onClick={openOriginalImage} />
       <div className='flex flex-col justify-between ml-4 my-1 w-full'>
         <div>
           <div className='flex items-center justify-between'>
@@ -54,7 +60,7 @@ const Item = ({ itemName, itemPic, stock, itemColor, defaultItemPrice, removeIte
             <div>{stock}</div>
             <div>
               <input
-                className='h-2 w-2 mr-1 accent-blackdefault'
+                className='h-2 w-2 cursor-pointer mr-1 accent-blackdefault'
                 type='checkbox'
                 name='gift'
                 value='gift'
@@ -64,7 +70,7 @@ const Item = ({ itemName, itemPic, stock, itemColor, defaultItemPrice, removeIte
           </div>
         </div>
         <div className='flex justify-between'>
-          <div className='flex text-3xs'>
+          <div className='flex text-4xs'>
             <button onClick={decrement} className={itemQuantity === 1 ? 'text-graydefault' : ''}>-</button>
             <div className='px-1'>{itemQuantity}</div>
             <button onClick={increment}>+</button>
