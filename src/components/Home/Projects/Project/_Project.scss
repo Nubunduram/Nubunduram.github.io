@@ -1,0 +1,23 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+.project {
+    &__stack {
+        display: flex;
+        padding: 16px;
+        gap: 4px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        padding: 0 16px;
+    }
+
+    &__detail {
+        padding: 16px 40px;
+    }
+
+    &__link {
+        padding-left: 40px;
+    }
+}

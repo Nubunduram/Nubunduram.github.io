@@ -3,17 +3,15 @@ import "./_Header.scss";
 
 const Header = () => {
   return (
-    <header>
+    <header id="home-header" className="home-header">
       <div className="img-container">
-        <img src={homeHeaderImg}/>
+        <img src={homeHeaderImg} />
       </div>
-      <div className="title-container">
-        <h1>
-          <span className="name" id="name">Antoine<br />Caron</span>
-          <br />
-          <span id="job-title" className="job-title">Web Developer Front-End</span>
-        </h1>
-      </div>
+      <h1>
+        <span className="name" id="name">Antoine</span>
+        <span className="last-name" id="last-name">Caron</span>
+        <span className="job-title" id="job-title">Web Developer Front-End</span>
+      </h1>
     </header>
   )
 }

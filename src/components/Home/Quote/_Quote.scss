@@ -3,29 +3,37 @@
     text-align: center;
 
     p {
-        * {
-            display: block;
-        }
-        
+        width: 80%;
+        max-width: 1440px;
+        margin: auto;
+
         q {
-            display: inline-flex;
+            position: relative;
             font-weight: 400;
             font-size: 2rem;
             padding-bottom: 16px;
+
             i {
-                margin-top: -16px;
-                margin-right: 16px;
+                position: absolute;
+                top: -24px;
+                left: -32px;
             }
+
+            &::before {
+                quotes: none;
+            }
+
+            &::after {
+                quotes: none;
+            }
+
         }
-        q::before {
-            quotes: none;
-        }
-        q::after {
-            quotes: none;
-        }
+
         a {
+            margin-top: 16px;
             text-transform: uppercase;
             font-weight: 300;
+            display: block;
         }
     }
 }

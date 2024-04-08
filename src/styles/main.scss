@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   font: inherit;
   color: inherit;
   font-family: 'Red Hat Display', sans-serif;
@@ -10,22 +9,32 @@
 }
 
 button {
+  border: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  outline: none;
   background: none;
-  font-family: inherit;
-  font-size: inherit;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
 }
 
 a {
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
-a:hover {
-  opacity: 0.7;
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+

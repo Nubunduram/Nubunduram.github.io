@@ -12,13 +12,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-width: 80%;
+        width: 90%;
         max-width: 1440px;
-        padding: 24px 0px;
+        padding: 16px 0px;
         margin: auto;
+        height: 48px;
 
         .navigation {
+            
             .burger-button {
+                margin-left: auto;
                 display: none;
             }
 
@@ -30,4 +33,57 @@
     }
 
 
+}
+
+@media only screen and (max-width: 768px) {
+
+    .general-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: rgb(255, 255, 255, 0.8);
+
+        nav {
+
+            .navigation {
+                flex-direction: column;
+                align-self: self-start;
+                border-radius: 16px;
+                gap: 0;
+                border: solid 2px $default-gray;
+                background-color: $default-white;
+                align-items: end;
+
+                ul {
+                    flex-direction: column;
+                    gap: 0;
+                    display: none;
+                    border-radius: inherit;
+                    text-align: end;
+
+
+                    li {
+                        border-top: solid 2px $default-gray;
+                        padding: 16px;
+                    }
+
+                    li:last-child {
+                        text-align: center;
+                        border-bottom-left-radius: inherit;
+                        border-bottom-right-radius: inherit;
+
+                    }
+                }
+
+                .burger-button {
+                    display: block;
+                    padding: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.displayed {
+    display: flex !important;
 }

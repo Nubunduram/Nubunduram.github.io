@@ -1,21 +1,20 @@
-import "./Footer.scss";
+import "./_Footer.scss";
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
     <footer>
       <nav>
-        <div>
-          <span>
-            AC
-          </span>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <ul>
+        <span>
+          AC
+        </span>
+        <ul className="nav-list">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/#projects">Projects</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/#contact">Contact</Link></li>
+        </ul>
+        <ul className="social-list">
           <li><a href="https://www.linkedin.com/in/aacaron/"><i className="fa-brands fa-linkedin-in"></i></a></li>
           <li><a href="https://github.com/Nubunduram"><i className="fa-brands fa-github"></i></a></li>
         </ul>
