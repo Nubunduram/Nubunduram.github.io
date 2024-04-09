@@ -1,0 +1,40 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+
+.presentation {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    min-height: 242px;
+    margin-bottom: 32px;
+
+    p {
+        font-size: 1.5rem;
+        margin: auto;
+        max-width: 750px;
+        padding: 8px;
+        height: 75%;
+    }
+
+    .buttons {
+        height: 25%;
+
+        button {
+            padding: 16px;
+            transition: 0.25s;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+
+            &:active {
+                transform: scale(0.85);
+            }
+        }
+    }
+}

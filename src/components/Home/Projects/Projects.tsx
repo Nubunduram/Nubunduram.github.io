@@ -8,7 +8,8 @@ const Projects = () => {
       <div className="projects-grid">
         <a href="#" target="_blank">
           <img src="../../src/assets/homeHeader.jpg" />
-          <Project />        </a>
+          <Project />
+        </a>
         <a href="#" target="_blank">
           <img src="../../src/assets/homeHeader.jpg" />
           <Project />

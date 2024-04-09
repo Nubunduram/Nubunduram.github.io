@@ -20,7 +20,7 @@ const Header = () => {
           <ul id="nav-list" className={isNavDisplayed ? "displayed" : ""}>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/#projects">Projects</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/#about">About</Link></li>
             <li><Link to="/#contact">Contact</Link></li>
             <li><button id="toggle-dark-mode"><i className="fa-solid fa-lightbulb"></i></button></li>
           </ul>

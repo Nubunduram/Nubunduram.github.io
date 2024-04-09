@@ -1,7 +1,7 @@
 import homeHeaderImg from "../../../assets/homeHeader.jpg";
-import "./_Header.scss";
+import "./_HomeHeader.scss";
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <header id="home-header" className="home-header">
       <div className="img-container">
@@ -16,4 +16,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HomeHeader

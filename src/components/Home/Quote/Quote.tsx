@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./_Quote.scss";
 
 interface QuoteProps {
@@ -11,7 +10,6 @@ const Quote: React.FC<QuoteProps> = ({ quote }) => {
     <section className="quote-section">
       <p>
         <q><i className="fa fa-quote-left"></i>{quote}</q>
-        <Link to="/about">Learn More</Link>
       </p>
     </section>
   );
