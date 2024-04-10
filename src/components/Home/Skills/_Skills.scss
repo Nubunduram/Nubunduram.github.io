@@ -1,0 +1,80 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.skills-section {
+    background-color: $default-green;
+    color: $default-white;
+    padding: 32px 0;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 32px;
+    }
+
+    ul {
+        width: 90%;
+        max-width: 768px;
+        margin: auto;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 16px;
+        font-size: 1.25rem;
+        border-radius: 5px;
+
+        li {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 8px;
+            transition: 1s;
+
+            p {
+                display: none;
+                width: inherit;
+                height: inherit;
+                padding: inherit;
+                border-radius: inherit;
+                place-content: center;
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                font-size: 1rem;
+            }
+
+            &:hover {
+                transform: rotateY(180deg);
+            }
+
+            &:hover p {
+                display: grid;
+                animation: rotateAnimation 1s;
+                transform: rotateY(180deg);
+                opacity: 1;
+                background: rgba(93, 115, 88, 0.8);
+            }
+        }
+    }
+}
+
+@media screen and (768px < width) {
+    .skills-section ul {
+        width: 450px;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+}
+
+@keyframes rotateAnimation {
+    from {
+        opacity: 0;
+        background-color: rgba(0,0,0,0);
+    }
+    to {
+        opacity: 1;
+        background: rgba(93, 115, 88, 0.8);
+    }
+}

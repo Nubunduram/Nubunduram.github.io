@@ -2,7 +2,7 @@
 @import "../../../styles/variables";
 
 
-.presentation {
+.about {
     width: 90%;
     display: flex;
     justify-content: center;
@@ -10,22 +10,22 @@
     flex-direction: column;
     text-align: center;
     margin: auto;
-    min-height: 242px;
-    margin-bottom: 32px;
+    height: 400px;
+    margin: 32px auto;
 
     p {
         font-size: 1.5rem;
         margin: auto;
         max-width: 750px;
         padding: 8px;
-        height: 75%;
+        display: grid;
+        place-content: center;
     }
 
     .buttons {
-        height: 25%;
 
         button {
-            padding: 16px;
+            padding: 32px;
             transition: 0.25s;
 
             &:hover {
@@ -35,6 +35,14 @@
             &:active {
                 transform: scale(0.85);
             }
+        }
+    }
+}
+
+@media screen and (width < 375px) {
+    .about {
+        p {
+            height: 435px;
         }
     }
 }

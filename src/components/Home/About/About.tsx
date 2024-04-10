@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import "./_Presentation.scss";
+import "./_About.scss";
 
-const Presentation = () => {
+const About = () => {
   const [paragraphIndex, setParagraphIndex] = useState(0);
   const paragraphs = [
     "👋 A passionate and self-taught web developer. Over the past years, I discovered the world of web development, learning from various classes, professionals, and my own project experiences. Before joining a class to get a diploma.",
@@ -32,7 +32,7 @@ const Presentation = () => {
   };
 
   return (
-    <section className="presentation" id="presentation">
+    <section className="about" id="about">
       <p>{paragraphs[paragraphIndex]}</p>
       <div className='buttons'>
         <button onClick={handlePrevious}><i className="fa-solid fa-2x fa-arrow-left"></i></button>
@@ -42,4 +42,4 @@ const Presentation = () => {
   );
 };
 
-export default Presentation;
+export default About;

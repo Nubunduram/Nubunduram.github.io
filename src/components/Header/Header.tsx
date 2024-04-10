@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import "./_Header.scss";
 
 const Header = () => {
@@ -19,8 +19,8 @@ const Header = () => {
           </button>
           <ul id="nav-list" className={isNavDisplayed ? "displayed" : ""}>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/#projects">Projects</Link></li>
             <li><Link to="/#about">About</Link></li>
+            <li><Link to="/#projects">Projects</Link></li>
             <li><Link to="/#contact">Contact</Link></li>
             <li><button id="toggle-dark-mode"><i className="fa-solid fa-lightbulb"></i></button></li>
           </ul>
