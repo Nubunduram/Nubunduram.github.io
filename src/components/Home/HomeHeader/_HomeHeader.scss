@@ -3,6 +3,7 @@
 
 @media screen and (width <=768px) {
     #home {
+        
         .home-header {
             width: 90%;
             max-width: 1440px;
@@ -56,7 +57,6 @@
                 .job-title {
                     font-weight: 300;
                     font-size: 1.25rem;
-                    color: $default-gray;
                 }
             }
         }
@@ -65,6 +65,7 @@
 
 @media screen and (768px < width) {
     #home {
+        
         .home-header {
             display: flex;
             justify-content: space-between;
@@ -107,7 +108,6 @@
                     text-align: center;
                     font-weight: 300;
                     font-size: 1.5rem;
-                    color: $default-gray;
                 }
             }
         }
@@ -118,6 +118,7 @@
 
     #home .home-header {
         max-width: 100%;
+
 
         h1 {
             .name,

@@ -8,11 +8,11 @@
     max-width: 580px;
     margin: auto;
 
+
     header {
         width: 100%;
         text-align: center;
         padding: 48px 0;
-        color: $default-black;
 
         h2 {
             font-size: 3rem;
@@ -30,8 +30,11 @@
     form {
         display: grid;
         width: 100%;
-        color: $default-black;
         margin-bottom: 32px;
+
+        input, textarea {
+            padding: 4px 8px;
+        }
 
         input {
             height: 2rem;
@@ -53,7 +56,7 @@
             margin: 16px auto;
             padding: 0.5rem 1rem;
             text-transform: uppercase;
-            background-color: $default-white;
+            background-color: inherit;
             color: $default-gray;
             border: 1px $default-gray solid;
             border-radius: 5%;

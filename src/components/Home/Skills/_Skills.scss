@@ -30,7 +30,6 @@
             border-radius: 15px;
             background-color: rgba(255, 255, 255, 0.8);
             padding: 8px;
-            transition: 1s;
 
             p {
                 display: none;
@@ -46,14 +45,8 @@
                 font-size: 1rem;
             }
 
-            &:hover {
-                transform: rotateY(180deg);
-            }
-
             &:hover p {
                 display: grid;
-                animation: rotateAnimation 1s;
-                transform: rotateY(180deg);
                 opacity: 1;
                 background: rgba(93, 115, 88, 0.8);
             }
@@ -65,16 +58,5 @@
     .skills-section ul {
         width: 450px;
         grid-template-columns: repeat(4, minmax(100px, 1fr));
-    }
-}
-
-@keyframes rotateAnimation {
-    from {
-        opacity: 0;
-        background-color: rgba(0,0,0,0);
-    }
-    to {
-        opacity: 1;
-        background: rgba(93, 115, 88, 0.8);
     }
 }

@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -26,15 +28,77 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 16px;
+.dark {
+  background-color: $default-gray;
+  color: $default-white;
+
+  input,
+  textarea {
+    background-color: $light-gray;
+    color: $default-white;
+    border: solid 1px $default-green;
+    border-radius: 5px;
+  }
+
+  .general-header {
+    color: $default-green;
+
+    .logo {
+      color: $default-white;
+    }
+
+  }
+
+  .home {
+    .job-title {
+      color: $default-green;
+    }
+
+    .skills-section,
+    .projects-section {
+      background-color: $dark-green;
+    }
+
+    .contact-section {
+      header {
+        h3 {
+          a {
+            color: $default-green;
+          }
+        }
+      }
+
+      form {
+        color: $default-green;
+
+        button {
+          color: inherit;
+          border-color: $default-green;
+
+          &:hover {
+            color: $default-gray;
+            border-color: $default-gray;
+            background-color: $default-green;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $dark-green;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .general-header,
+    .general-header nav .navigation {
+      background-color: rgb(76, 76, 76, 0.7);
+
+      .navigation,
+      .navigation ul li {
+        border-color: $default-green;
+      }
+    }
   }
 }
-
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
-}
-

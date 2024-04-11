@@ -26,6 +26,8 @@
             position: relative;
             height: 260px;
             overflow: hidden;
+            border: solid 2px rgb(93, 115, 88);
+            border-radius: 25px;
 
             img {
                 object-fit: cover;
@@ -35,13 +37,14 @@
 
             .project {
                 position: absolute;
-                height: 100%;
                 left: 0;
                 top: 0;
                 background: rgba(93, 115, 88, 0.9);
                 opacity: 0;
                 transition: 0.2s;
             }
+
+
         }
 
         a:hover {
@@ -56,7 +59,18 @@
 }
 
 @media screen and (676px < width < 1048px) {
-    .last {
-        grid-area: 2 / 1 / 2 / 3;
+
+    // your existing styles
+
+    .projects-section .projects-grid .last-project {
+        grid-area: 2 / 1 / 2 / 3 !important; // Adjust this as needed
+    }
+
+}
+
+@media screen and (width <=768px) {
+    #project {
+        color: $default-white;
+        opacity: 1;
     }
 }

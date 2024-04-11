@@ -30,10 +30,12 @@
 
             &:hover {
                 transform: scale(1.15);
+                color: $default-green;
             }
 
             &:active {
                 transform: scale(0.85);
+                color: inherit;
             }
         }
     }
@@ -41,8 +43,6 @@
 
 @media screen and (width < 375px) {
     .about {
-        p {
-            height: 435px;
-        }
+        height: 475px;
     }
 }

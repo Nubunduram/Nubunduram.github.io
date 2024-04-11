@@ -1,6 +1,7 @@
 import "./_Skills.scss";
 
-const Skills = () => {
+const Skills: React.FC = () => {
+
   return (
     <section id="skills-section" className="skills-section">
       <h2>Skills</h2>
