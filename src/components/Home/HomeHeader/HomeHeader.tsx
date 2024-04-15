@@ -1,7 +1,8 @@
-import homeHeaderImg from "../../../assets/homeHeader.jpg";
 import "./_HomeHeader.scss";
 
+
 const HomeHeader = () => {
+  const homeHeaderImg = "../../../src/assets/homeHeader.jpg";
   return (
     <header id="home-header" className="home-header">
       <div className="img-container">
@@ -10,7 +11,7 @@ const HomeHeader = () => {
       <h1>
         <span className="name" id="name">Antoine</span>
         <span className="last-name" id="last-name">Caron</span>
-        <span className="job-title" id="job-title">Web Developer Front-End</span>
+        <span className="job-title" id="job-title">Web Developer</span>
       </h1>
     </header>
   )
