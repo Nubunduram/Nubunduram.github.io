@@ -16,19 +16,19 @@ const Projects: React.FC = () => {
       title: 'Project Kasa',
       details: 'Kasa Project is a front-end web application developped using Scss & React. The project display accomodations pictures, details, ratings, ... All of it coming from a JSON file.',
       stack: ['React', 'Scss'],
-      imageUrl: './src/assets/kasa.png'
+      imageUrl: './public/assets/kasa.png'
     },
     {
       title: 'Architect Portfolio',
       details: 'For this project i had to implement a Login page and an editor mode via modal to connect with the back-end and update the DataBase',
       stack: ['HTML', 'CSS', 'JavaScript'],
-      imageUrl: './src/assets/portfolio-sophie.png'
+      imageUrl: './public/assets/portfolio-sophie.png'
     },
     {
       title: 'Book Rating Site',
       details: 'Creating the server for the website, CRUD, Ratings Logic, Green IT, authentification with JWT & bcrypt, MVC',
       stack: ['Node.js', 'Express', 'MongoDB'],
-      imageUrl: './src/assets/grimoire.png'
+      imageUrl: './public/assets/grimoire.png'
     }
   ];
 
