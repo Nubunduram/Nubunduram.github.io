@@ -12,7 +12,8 @@ const Contact = () => {
         </h3>
       </header>
 
-      <form id="contact-form" name="contact-form" method="POST" data-netlify="true">
+      <form id="contact-form" name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="contact-form" value="contact-form" />
 
         <label htmlFor="email">Your Email:</label>
         <input type="email" id="email" name="email" required />
