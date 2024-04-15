@@ -12,7 +12,7 @@ const Contact = () => {
         </h3>
       </header>
 
-      <form id="contactForm">
+      <form id="contactForm" data-netlify="true">
         <label htmlFor="email">Your Email:</label>
         <input type="email" id="email" name="email" required />
 
