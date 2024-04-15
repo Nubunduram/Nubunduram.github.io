@@ -12,9 +12,14 @@ const Contact = () => {
         </h3>
       </header>
 
-      <form id="contact-form" name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="contact-form" value="contact-form" />
+      <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
 
+        {/* Add a honeypot field to prevent spam */}
+        <p style={{ visibility: "hidden" }}>
+          <label htmlFor="bot-field">Don’t fill this out if you're human: <input type="text" name="bot-field" /></label>
+        </p>
+        
         <label htmlFor="email">Your Email:</label>
         <input type="email" id="email" name="email" required />
 
