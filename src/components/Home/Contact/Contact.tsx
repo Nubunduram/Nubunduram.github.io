@@ -12,7 +12,14 @@ const Contact = () => {
         </h3>
       </header>
 
-      <form id="contactForm" data-netlify="true">
+      <form id="contact-form" data-netlify="true" netlify-honeypot="bot-field" method="POST">
+        <input type="hidden" name="contact-form" value="contact-form" />
+
+        {/* honeypot field to prevent spam */}
+        <p style={{ visibility: "hidden" }}>
+          <label htmlFor="bot-field">Don’t fill this out if you're human: <input type="text" name="bot-field" /></label>
+        </p>
+
         <label htmlFor="email">Your Email:</label>
         <input type="email" id="email" name="email" required />
 
@@ -22,7 +29,7 @@ const Contact = () => {
         <label htmlFor="message">Message:</label>
         <textarea id="message" name="message" rows={10} cols={30} required></textarea>
 
-        <button type="button">Send</button>
+        <button type="submit">Send</button>
 
       </form>
     </section>
