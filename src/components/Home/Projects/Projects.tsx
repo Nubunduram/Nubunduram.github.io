@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
       details: 'For this project i had to implement a Login page and an editor mode via modal to connect with the back-end and update the DataBase',
       stack: ['HTML', 'CSS', 'JavaScript'],
       imageUrl: './assets/portfolio-sophie.png',
-      link: "https://nubunduram.github.io/Kasa/",
+      link: "https://nubunduram.github.io/portfolio-architecte-sophie-bluel/",
 
     },
     {
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       details: 'Creating the server for the website, CRUD, Ratings Logic, Green IT, authentification with JWT & bcrypt, MVC',
       stack: ['Node.js', 'Express', 'MongoDB'],
       imageUrl: './assets/grimoire.png',
-      link: "https://nubunduram.github.io/Kasa/",
+      link: "https://nubunduram.github.io/Grimoire/",
     }
   ];
 
