@@ -5,13 +5,20 @@ footer {
     background-color: $default-green;
     color: $default-white;
 
+    a {
+        transition: 0.25s;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        font-size: calc(1em * 1.25);
+    }
+
     nav {
-        width: 90%;
-        max-width: 1440px;
+        @include general-width-setter;
+        height: 20px;
         padding: 24px 0;
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
+        @include flex-setter($init, space-between, center);
 
         ul {
             display: flex;

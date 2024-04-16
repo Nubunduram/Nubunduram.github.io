@@ -8,28 +8,23 @@
 
     h2 {
         text-align: center;
-        font-size: 3rem;
         margin-bottom: 32px;
     }
 
     ul {
-        width: 90%;
-        max-width: 768px;
-        margin: auto;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        @include general-width-setter;
+        @include grid-items-center;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 16px;
-        font-size: 1.25rem;
-        border-radius: 5px;
+        border-radius: $small-radius;
 
         li {
             position: relative;
-            width: 64px;
-            height: 64px;
-            border-radius: 15px;
+            width: 100px;
+            height: 100px;
+            @include grid-items-center;
+            border-radius: $medium-radius;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 8px;
 
             p {
                 display: none;
@@ -42,7 +37,6 @@
                 opacity: 0;
                 top: 0;
                 left: 0;
-                font-size: 1rem;
             }
 
             &:hover p {
@@ -58,5 +52,18 @@
     .skills-section ul {
         width: 450px;
         grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+}
+
+@media screen and (1440px < width) {
+    .skills-section ul {
+        width: fit-content;
+        grid-template-columns: repeat(6, 100px);
+    }
+}
+
+@media screen and (1800px < width) {
+    .skills-section ul {
+        grid-template-columns: repeat(12, 100px);
     }
 }

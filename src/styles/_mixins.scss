@@ -1,0 +1,24 @@
+@import "./variables";
+
+@mixin general-width-setter ($width : 90%) {
+    max-width: $max-width;
+    width: $width;
+    margin: auto;
+}
+
+@mixin grid-content-center {
+    display: grid;
+    place-content: center;
+}
+
+@mixin grid-items-center {
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex-setter ($direction : $init, $justify : $init, $align: $init) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

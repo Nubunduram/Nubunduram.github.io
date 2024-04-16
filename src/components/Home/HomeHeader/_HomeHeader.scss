@@ -2,134 +2,107 @@
 @import "../../../styles/variables";
 
 @media screen and (width <=768px) {
-    #home {
-        
-        .home-header {
-            width: 90%;
-            max-width: 1440px;
+    #home .home-header {
+        @include general-width-setter;
+        @include grid-content-center;
+        position: relative;
+
+        .img-container {
+            min-width: 80%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            border-radius: $circle-radius;
             margin: auto;
-            display: grid;
-            place-content: center;
-            position: relative;
+            overflow: hidden;
 
-            .img-container {
-                min-width: 80%;
-                max-width: 500px;
-                aspect-ratio: 1;
-                border-radius: 100%;
-                margin: auto;
-                overflow: hidden;
+            img {
+                height: 50%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
 
-                img {
-                    height: 50%;
-                    width: 100%;
-                    object-fit: cover;
-                }
+        h1 {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-top: 16px;
+
+            * {
+                display: block;
             }
 
-            h1 {
-                width: 100%;
-                max-width: 500px;
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%);
-                text-align: center;
-                margin-top: 16px;
+            .name,
+            .last-name {
+                line-height: 1;
+                text-transform: uppercase;
+            }
 
-                .name,
-                .last-name {
-                    display: block;
-                    font-size: 3rem;
-                    line-height: 1;
-                    text-transform: uppercase;
-                }
+            .name {
+                margin-right: 55px;
+            }
 
-                .name {
-                    margin-right: 55px;
-                }
+            .last-name {
+                margin-left: 100px;
+            }
 
-                .last-name {
-                    margin-left: 100px;
-                }
-
-                .job-title {
-                    font-weight: 300;
-                    font-size: 1.25rem;
-                }
+            .job-title {
+                font-weight: 300;
             }
         }
     }
 }
 
 @media screen and (768px < width) {
-    #home {
-        
-        .home-header {
-            display: flex;
-            justify-content: space-between;
-            padding: 36px 0;
-            max-width: 90%;
-            margin: auto;
+    #home .home-header {
+        @include general-width-setter;
+        @include flex-setter($init, space-between);
+        padding: 36px 0;
 
-            .img-container {
-                width: 50%;
+        .img-container {
+            width: 50%;
 
-                img {
-                    height: auto;
-                    width: 100%;
-                }
+            img {
+                height: auto;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h1 {
+            @include grid-content-center;
+            width: 50%;
+            grid-template-columns: 1fr;
+
+            .name,
+            .last-name {
+                text-align: center;
+                line-height: 0.9;
+                text-transform: uppercase;
             }
 
-            h1 {
-                display: grid;
-                place-content: center;
-                width: 50%;
-                grid-template-columns: 1fr;
+            .name {
+                margin-left: -55px;
+            }
 
-                .name,
-                .last-name {
-                    text-align: center;
-                    font-size: 3rem;
-                    line-height: 0.9;
-                    text-transform: uppercase;
-                }
+            .last-name {
+                margin-left: 100px;
+            }
 
-                .name {
-                    margin-left: -55px;
-                }
-
-                .last-name {
-                    margin-left: 100px;
-                }
-
-                .job-title {
-                    text-align: center;
-                    font-weight: 300;
-                    font-size: 1.5rem;
-                }
+            .job-title {
+                text-align: center;
+                font-weight: 300;
             }
         }
     }
 }
 
-@media screen and (1440px < width) {
 
-    #home .home-header {
-        max-width: 100%;
-
-
-        h1 {
-            .name,
-            .last-name {
-                font-size: 6rem;
-                line-height: 1;
-            }
-
-            .job-title {
-                font-size: 2.5rem;
-            }
-        }
-    }
+.job-title {
+    font-size: calc(1em/2);
 }

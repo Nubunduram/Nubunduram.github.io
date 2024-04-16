@@ -1,16 +1,17 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .quote-section {
     margin: 5rem auto;
     text-align: center;
 
     p {
-        width: 80%;
-        max-width: 1440px;
-        margin: auto;
+        @include general-width-setter(80%);
 
         q {
+            font-size: calc(1em * 1.25);
             position: relative;
             font-weight: 400;
-            font-size: 2rem;
             padding-bottom: 16px;
 
             i {

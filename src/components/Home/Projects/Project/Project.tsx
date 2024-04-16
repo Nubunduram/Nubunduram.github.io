@@ -22,7 +22,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
                     <li key={index}>{item} |</li>
                 ))}
             </ul>
-            <h2 className="project__title">{title}</h2>
+            <h3 className="project__title">{title}</h3>
             <p className="project__detail">{details}</p>
             <p className="project__link">Click to checkout !</p>
         </div>

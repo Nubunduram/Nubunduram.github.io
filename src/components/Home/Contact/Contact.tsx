@@ -7,9 +7,9 @@ const Contact = () => {
         <h2>
           let's connect
         </h2>
-        <h3>
+        <p>
           Feel free to reach out if you're interested in working together, You can also email me at <a href="mailto:caron.antoine.pro@gmail.com?subject=Subject%20Here&body=Your%20message%20here">caron.antoine.pro@gmail.com</a>. All fields are required!
-        </h3>
+        </p>
       </header>
 
       <form id="contact-form" name="contact" method="post">

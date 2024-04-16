@@ -5,17 +5,12 @@
     display: flex;
     color: $default-gray;
     text-transform: uppercase;
-    font-size: 1rem;
     font-weight: 400;
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        max-width: 1440px;
+        @include general-width-setter;
+        @include flex-setter($init, space-between, center);
         padding: 16px 0px;
-        margin: auto;
         height: 48px;
 
         .navigation {
@@ -64,7 +59,7 @@
         nav .navigation {
             flex-direction: column;
             align-self: self-start;
-            border-radius: 16px;
+            border-radius: $medium-radius;
             gap: 0;
             border: solid 2px $default-gray;
             background-color: rgb(255, 255, 255, 0.7);
@@ -99,22 +94,18 @@
 
 }
 
-.displayed {
-    display: flex !important;
+#general-header nav .navigation .displayed {
+    display: flex;
 }
 
 .general-header .navigation ul li:hover {
     filter: blur(0px);
     font-weight: 400;
-    color: #fff;
+    color: $default-white;
     background-color: $default-green;
-    border-radius: 5px;
-
-    a {
-        opacity: 1;
-    }
+    border-radius: $small-radius;
 }
 
 .general-header .navigation ul:hover li:not(:hover) {
-    filter: blur(1px);
+    filter: blur(0.6px);
 }

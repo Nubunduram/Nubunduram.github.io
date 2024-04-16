@@ -1,0 +1,23 @@
+@keyframes errorAnimation {
+    0% {
+      color: $default-green;
+    }
+  
+    25% {
+      color: $default-green;
+  
+    }
+  
+    50% {
+      color: inherit;
+    }
+  
+    75% {
+      color: inherit;
+    }
+  
+    100% {
+      color: inherit;
+      /* Third number turns green */
+    }
+  }

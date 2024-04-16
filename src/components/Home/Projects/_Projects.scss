@@ -8,16 +8,13 @@
 
     &__title {
         text-align: center;
-        font-size: 3rem;
         margin-bottom: 32px;
     }
 
     .projects-grid {
+        @include general-width-setter;
         display: grid;
-        width: 90%;
-        max-width: 1440px;
         gap: 32px;
-        margin: auto;
         grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
 
 
@@ -27,7 +24,7 @@
             height: 260px;
             overflow: hidden;
             border: solid 2px rgb(93, 115, 88);
-            border-radius: 25px;
+            border-radius: $big-radius;
 
             img {
                 object-fit: cover;
@@ -39,16 +36,12 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                background: rgba(93, 115, 88, 0.9);
+                background: rgba(93, 115, 88, 0.75);
                 opacity: 0;
                 transition: 0.2s;
             }
 
 
-        }
-
-        a:hover {
-            opacity: initial;
         }
 
         a:hover .project {

@@ -2,8 +2,7 @@
 @import "../../../styles/variables";
 
 .contact-section {
-    display: grid;
-    place-items: center;
+    @include grid-items-center;
     width: 70%;
     max-width: 580px;
     margin: auto;
@@ -15,11 +14,10 @@
         padding: 48px 0;
 
         h2 {
-            font-size: 3rem;
             margin-bottom: 16px;
         }
 
-        h3 {
+        p {
             a {
                 color: $default-gray;
                 text-decoration: underline;
@@ -32,7 +30,8 @@
         width: 100%;
         margin-bottom: 32px;
 
-        input, textarea {
+        input,
+        textarea {
             padding: 4px 8px;
         }
 
@@ -47,19 +46,13 @@
             margin-bottom: 4px;
         }
 
-        #message {
-            width: 100%;
-        }
-
-
         button {
             margin: 16px auto;
             padding: 0.5rem 1rem;
             text-transform: uppercase;
-            background-color: inherit;
             color: $default-gray;
             border: 1px $default-gray solid;
-            border-radius: 5%;
+            border-radius: $small-radius;
         }
 
         button:hover {
@@ -67,11 +60,5 @@
             color: $default-white;
             border-color: $default-white;
         }
-    }
-}
-
-@media screen and (768px < width) {
-    .contact-section header h2 {
-        font-size: 4rem;
     }
 }

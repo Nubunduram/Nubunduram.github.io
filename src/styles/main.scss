@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./animations";
+@import "./mixins";
 
 * {
   margin: 0;
@@ -10,11 +12,21 @@
   list-style: none;
 }
 
+html {
+  font-size: 16px;
+
+  @media screen and (768px < width) {
+    font-size: 18px;
+  }
+
+  @media screen and (1240px < width) {
+    font-size: 20px;
+  }
+}
+
 button {
   border: none;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   background: none;
   cursor: pointer;
   text-align: center;
@@ -22,12 +34,68 @@ button {
 
 a {
   cursor: pointer;
+}
 
-  &:hover {
-    opacity: 0.7;
+// Basic Layout
+#root {
+  @include flex-setter(column);
+  min-height: 100dvh;
+
+  main {
+    flex: 1;
   }
 }
 
+// Error Page
+.error-page {
+  text-align: center;
+  color: inherit;
+  @include grid-items-center;
+  grid-template-rows: auto;
+
+  h1 {
+    margin-top: 32px;
+
+    .error-number {
+      animation: errorAnimation 4s infinite;
+    }
+
+    .error-1 {
+      animation-delay: 0s;
+    }
+
+    .error-2 {
+      animation-delay: 1s;
+    }
+
+    .error-3 {
+      animation-delay: 2s;
+    }
+  }
+
+  a {
+    padding: 8px;
+    margin: 32px 0;
+    background-color: $default-green;
+    color: $default-white;
+    border: ridge 4px $default-green;
+    transition: 0.1s;
+  }
+
+  a:hover {
+    scale: 1.05;
+    box-shadow: 2px 2px 6px 2px $light-gray;
+  }
+
+  a:active {
+    border-style: groove;
+    scale: 1;
+  }
+
+
+}
+
+// Dark Mode
 .dark {
   background-color: $default-gray;
   color: $default-white;
@@ -37,7 +105,7 @@ a {
     background-color: $light-gray;
     color: $default-white;
     border: solid 1px $default-green;
-    border-radius: 5px;
+    border-radius: $small-radius;
   }
 
   .general-header {
@@ -89,6 +157,13 @@ a {
     background-color: $dark-green;
   }
 
+  .error-page {
+    a {
+      background-color: $dark-green;
+      border-color: $dark-green;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
 
     .general-header,
@@ -101,4 +176,23 @@ a {
       }
     }
   }
+}
+
+// General Font
+p,
+a,
+li,
+label,
+input,
+textarea {
+  font-size: $font-xs;
+}
+
+h1,
+h2 {
+  font-size: $font-xl;
+}
+
+h3 {
+  font-size: $font-l;
 }
