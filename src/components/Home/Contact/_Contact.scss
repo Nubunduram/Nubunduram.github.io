@@ -19,8 +19,28 @@
 
         p {
             a {
-                color: $default-gray;
                 text-decoration: underline;
+                text-decoration: none;
+                position: relative;
+                font-weight: bold;
+
+                &:hover::before {
+                    bottom: -2px;
+                    height: 100%;
+
+                }
+
+                &::before {
+                    content: '';
+                    background-color: $default-green;
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 4px;
+                    z-index: -1;
+                    transition: all .3s ease-in-out;
+                }
             }
         }
     }

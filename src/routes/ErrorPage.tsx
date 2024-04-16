@@ -8,7 +8,7 @@ const ErrorPage = () => {
         <span className="error-number error-2">0</span>
         <span className="error-number error-3">4</span>
       </h1>
-      <p>Seems like you'have lost your way...<br />May be i can help you ?</p>
+      <p>Seems like you have lost your way...<br />May be i can help you ?</p>
       <Link to="/#contact">Click me !</Link>
     </main>
   )
