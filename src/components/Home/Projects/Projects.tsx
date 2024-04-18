@@ -15,8 +15,8 @@ const Projects: React.FC = () => {
   const projectsData: ProjectData[] = [
     {
       title: 'Project Kasa',
-      details: 'Kasa Project is a front-end web application developped using Scss & React. The project display accomodations pictures, details, ratings, ... All of it coming from a JSON file.',
-      stack: ['React', 'Scss'],
+      details: 'Kasa is a front-end web application developped using Scss & React. The project display accomodations pictures, details, ratings, ... All of it coming from a JSON file.',
+      stack: ['React', 'Sass'],
       imageUrl: './assets/kasa.png',
       link: "https://nubunduram.github.io/Kasa/",
 
