@@ -1,23 +1,13 @@
-import { useState } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
+import { useState } from 'react';
 import "./_Header.scss";
+import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 
 const Header = () => {
   const [isNavDisplayed, setIsNavDisplayed] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleNav = () => {
     setIsNavDisplayed(prevState => !prevState);
-  };
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevState => !prevState);
-    const element = document.body || document.documentElement;
-    if (isDarkMode) {
-      element.classList.remove('dark');
-    } else {
-      element.classList.add('dark');
-    }
   };
 
   return (
@@ -33,7 +23,7 @@ const Header = () => {
             <li><Link to="/#about">About</Link></li>
             <li><Link to="/#projects">Projects</Link></li>
             <li><Link to="/#contact">Contact</Link></li>
-            <li><button id="toggle-dark-mode" onClick={toggleDarkMode}><i className="fa-solid fa-lightbulb"></i></button></li>
+            <li><DarkModeToggle /></li>
           </ul>
         </span>
       </nav>
