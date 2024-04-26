@@ -10,15 +10,17 @@
 
         q {
             font-size: calc(1em * 1.25);
-            position: relative;
             font-weight: 400;
             padding-bottom: 16px;
 
-            i {
-                position: absolute;
-                top: -24px;
-                left: -32px;
+            .fa-quote-left {
+                margin-right: 8px;
             }
+
+            .fa-quote-right {
+                margin-left: 8px;
+            }
+
 
             &::before {
                 quotes: none;
