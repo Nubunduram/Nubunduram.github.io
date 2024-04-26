@@ -16,7 +16,7 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
-    }, 10000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, []);
