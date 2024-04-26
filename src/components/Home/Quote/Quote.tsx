@@ -1,4 +1,3 @@
-import React from "react";
 import "./_Quote.scss";
 
 interface QuoteProps {

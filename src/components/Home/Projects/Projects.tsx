@@ -40,7 +40,9 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="projects-section__title">Projects</h2>
+      <header>
+        <h2 className="projects-section__title">Projects</h2>
+      </header>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <a key={index} href={project.link} target="_blank" className={index === projectsData.length - 1 ? 'last-project' : ''}>

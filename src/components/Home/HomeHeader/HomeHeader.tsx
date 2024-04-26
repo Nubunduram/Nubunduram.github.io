@@ -4,7 +4,7 @@ const HomeHeader = () => {
   return (
     <header id="home-header" className="home-header">
       <div className="img-container">
-        <img src="./assets/home-header.jpg" />
+        <img src="./assets/home-header.jpg" alt="Green plant with light green background"/>
       </div>
       <h1>
         <span className="name" id="name">Antoine</span>
