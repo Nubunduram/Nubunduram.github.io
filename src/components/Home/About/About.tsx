@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import "./_About.scss";
 
 const About = () => {
@@ -13,37 +13,36 @@ const About = () => {
     "✨ If you're looking for a dedicated web developer who values quality and creativity, let's connect! I'm excited about the possibilities that lie ahead and i am excited to contribute my skills to meaningful projects."
   ];
 
-  const [timeIntervalId, setTimeIntervalId] = useState<number | undefined>(undefined);
+  const timerRef = useRef<number | undefined>(undefined);
 
   const startTimer = () => {
-    const intervalId = setInterval(() => {
+    timerRef.current = setInterval(() => {
       setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
-    }, 10000); // Update every 10 seconds
-    setTimeIntervalId(intervalId); // Set the interval ID
-    return intervalId; // Return the interval ID
+    }, 3000); // Update every 10 seconds
   }
 
-  const resetTimer = (intervalId: number | undefined) => {
-    if (intervalId) {
-      clearInterval(intervalId);
+  const resetTimer = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      startTimer(); // Restart timer after resetting
     }
   }
 
   useEffect(() => {
-    const intervalId = startTimer();
-    return () => resetTimer(intervalId); // Clear interval on unmount
+    startTimer(); // Start timer on component mount
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current); // Clear interval on unmount
+    }
   }, []);
 
   const handleNext = () => {
-    resetTimer(timeIntervalId); // Reset timer
     setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length); // Update index
-    startTimer();
+    resetTimer(); // Reset timer
   };
 
   const handlePrevious = () => {
-    resetTimer(timeIntervalId); // Reset timer
     setParagraphIndex(prevIndex => (prevIndex === 0 ? paragraphs.length - 1 : prevIndex - 1)); // Update index
-    startTimer();
+    resetTimer(); // Reset timer
   };
 
   return (
