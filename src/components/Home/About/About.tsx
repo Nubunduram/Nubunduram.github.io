@@ -13,22 +13,37 @@ const About = () => {
     "✨ If you're looking for a dedicated web developer who values quality and creativity, let's connect! I'm excited about the possibilities that lie ahead and i am excited to contribute my skills to meaningful projects."
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
-    }, 15000);
+  const [timeIntervalId, setTimeIntervalId] = useState<number | undefined>(undefined);
 
-    return () => clearInterval(interval);
+  const startTimer = () => {
+    const intervalId = setInterval(() => {
+      setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
+    }, 10000); // Update every 10 seconds
+    setTimeIntervalId(intervalId); // Set the interval ID
+    return intervalId; // Return the interval ID
+  }
+
+  const resetTimer = (intervalId: number | undefined) => {
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+  }
+
+  useEffect(() => {
+    const intervalId = startTimer();
+    return () => resetTimer(intervalId); // Clear interval on unmount
   }, []);
 
   const handleNext = () => {
-    setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
+    resetTimer(timeIntervalId); // Reset timer
+    setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length); // Update index
+    startTimer();
   };
 
   const handlePrevious = () => {
-    setParagraphIndex(prevIndex =>
-      !prevIndex ? paragraphs.length - 1 : prevIndex - 1
-    );
+    resetTimer(timeIntervalId); // Reset timer
+    setParagraphIndex(prevIndex => (prevIndex === 0 ? paragraphs.length - 1 : prevIndex - 1)); // Update index
+    startTimer();
   };
 
   return (
