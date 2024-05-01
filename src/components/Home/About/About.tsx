@@ -18,7 +18,7 @@ const About = () => {
   const startTimer = () => {
     timerRef.current = setInterval(() => {
       setParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
-    }, 15000); // Update every 10 seconds
+    }, 15000); // Update every 15 seconds
   }
 
   const resetTimer = () => {
