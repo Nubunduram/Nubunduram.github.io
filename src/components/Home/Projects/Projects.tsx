@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
         'Kasa is a front-end web application developed using Scss & React. The project displays accommodation pictures, details, ratings, ... All of it coming from a JSON file.',
       stack: ['React', 'Sass'],
       imageUrlWebP: './assets/kasa.webp',
-      imageUrlFallback: './assets/kasa.png',
+      imageUrlFallback: './assets/kasa.jpg',
       link: 'https://nubunduram.github.io/Kasa/',
     },
     {
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
         'For this project, I had to implement a Login page and an editor mode via modal to connect with the backend and update the DataBase',
       stack: ['HTML', 'CSS', 'JavaScript'],
       imageUrlWebP: './assets/portfolio-sophie.webp',
-      imageUrlFallback: './assets/portfolio-sophie.png',
+      imageUrlFallback: './assets/portfolio-sophie.jpg',
       link: 'https://nubunduram.github.io/portfolio-architecte-sophie-bluel/',
     },
     {
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
         'Creating the server for the website, CRUD, Ratings Logic, Green IT, authentication with JWT & bcrypt, MVC',
       stack: ['Node.js', 'Express', 'MongoDB'],
       imageUrlWebP: './assets/grimoire.webp',
-      imageUrlFallback: './assets/grimoire.png',
+      imageUrlFallback: './assets/grimoire.jpg',
       link: 'https://nubunduram.github.io/Grimoire/',
     },
   ];
