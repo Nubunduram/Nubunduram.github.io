@@ -15,8 +15,8 @@ const Footer = () => {
           <li><Link to="/#contact">Contact</Link></li>
         </ul>
         <ul className="social-list">
-          <li><a href="https://www.linkedin.com/in/aacaron/"><i className="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/Nubunduram"><i className="fa-brands fa-github"></i></a></li>
+          <li><a aria-label="Antoine Caron LinkedIn" href="https://www.linkedin.com/in/aacaron/"><i className="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a aria-label="Antoine Caron GitHub" href="https://github.com/Nubunduram"><i className="fa-brands fa-github"></i></a></li>
         </ul>
       </nav>
       <p>

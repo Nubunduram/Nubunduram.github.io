@@ -49,8 +49,8 @@ const About = () => {
     <section className="about" id="about">
       <p>{paragraphs[paragraphIndex]}</p>
       <div className='buttons'>
-        <button onClick={handlePrevious}><i className="fa-solid fa-2x fa-arrow-left"></i></button>
-        <button onClick={handleNext}><i className="fa-solid fa-2x fa-arrow-right"></i></button>
+        <button aria-label="Previous quote" onClick={handlePrevious}><i className="fa-solid fa-2x fa-arrow-left"></i></button>
+        <button aria-label="Next quote" onClick={handleNext}><i className="fa-solid fa-2x fa-arrow-right"></i></button>
       </div>
     </section>
   );

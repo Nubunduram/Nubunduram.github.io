@@ -15,7 +15,7 @@ const Header = () => {
       <nav>
         <span className='logo'>AC</span>
         <span className="navigation">
-          <button id="burger-button" className="burger-button" onClick={toggleNav}>
+          <button aria-label="Link Menu" id="burger-button" className="burger-button" onClick={toggleNav}>
             <i className="fa-solid fa-bars"></i>
           </button>
           <ul id="nav-list" className={isNavDisplayed ? "displayed" : ""}>
