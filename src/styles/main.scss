@@ -78,15 +78,15 @@ a {
   a {
     padding: 8px;
     margin: 32px 0;
-    background-color: $default-gray;
+    background-color: $default-blue;
     color: $default-white;
-    border: ridge 4px $default-gray;
+    border: ridge 4px $default-blue;
     transition: 0.1s;
   }
 
   a:hover {
     scale: 1.05;
-    box-shadow: 4px 4px 8px 2px $default-gray;
+    box-shadow: 4px 4px 8px 2px $default-blue;
   }
 
   a:active {
@@ -97,7 +97,7 @@ a {
 
 // Dark Mode
 .dark {
-  background-color: $default-gray;
+  background-color: $default-blue;
   color: $default-white;
 
   input,
@@ -154,8 +154,8 @@ a {
           border-color: $default-white;
 
           &:hover {
-            color: $default-gray;
-            border-color: $default-gray;
+            color: $default-blue;
+            border-color: $default-blue;
             background-color: $default-white;
           }
         }
@@ -175,7 +175,7 @@ a {
 
     .general-header,
     .general-header nav .navigation {
-      background-color: rgb($default-gray, 0.7);
+      background-color: rgb($default-blue, 0.7);
 
       .navigation,
       .navigation ul li {

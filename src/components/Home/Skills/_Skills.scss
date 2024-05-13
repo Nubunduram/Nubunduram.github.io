@@ -2,7 +2,7 @@
 @import "../../../styles/variables";
 
 .skills-section {
-    background-color: $default-gray;
+    background-color: $default-blue;
     color: $default-white;
     padding: 32px 0;
     text-align: center;
@@ -24,7 +24,7 @@
             height: 100px;
             @include grid-items-center;
             border-radius: $medium-radius;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba($default-white, 0.9);
 
             p {
                 width: inherit;
@@ -42,7 +42,7 @@
             &:hover p {
                 display: grid;
                 opacity: 1;
-                background: rgba($default-gray, 0.8);
+                background: rgba($default-blue, 0.8);
             }
         }
     }

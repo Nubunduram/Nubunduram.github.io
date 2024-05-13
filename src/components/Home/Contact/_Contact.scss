@@ -76,13 +76,13 @@
             margin: 16px auto;
             padding: 0.5rem 1rem;
             text-transform: uppercase;
-            color: $default-gray;
-            border: 1px $default-gray solid;
+            color: $default-blue;
+            border: 1px $default-blue solid;
             border-radius: $small-radius;
         }
 
         button:hover {
-            background-color: $default-gray;
+            background-color: $default-blue;
             color: $default-white;
             border-color: $default-white;
         }
