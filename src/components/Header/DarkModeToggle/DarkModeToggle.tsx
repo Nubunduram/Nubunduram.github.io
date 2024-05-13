@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 const DarkModeToggle = () => {
     // Step 1: Define state for dark mode
@@ -36,8 +38,8 @@ const DarkModeToggle = () => {
 
     return (
         <>
-            <button id="toggle-dark-mode" onClick={toggleDarkMode}>
-                <i className="fa-solid fa-lightbulb"></i>
+            <button aria-label='Dark Mode Toggle Button' id="toggle-dark-mode" onClick={toggleDarkMode}>
+                <FontAwesomeIcon icon={faLightbulb} />
             </button>
         </>
     );

@@ -1,5 +1,7 @@
 import "./_Footer.scss";
 import { HashLink as Link } from 'react-router-hash-link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -15,8 +17,8 @@ const Footer = () => {
           <li><Link to="/#contact">Contact</Link></li>
         </ul>
         <ul className="social-list">
-          <li><a aria-label="Antoine Caron LinkedIn" href="https://www.linkedin.com/in/aacaron/"><i className="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a aria-label="Antoine Caron GitHub" href="https://github.com/Nubunduram"><i className="fa-brands fa-github"></i></a></li>
+          <li><a aria-label="Antoine Caron LinkedIn" href="https://www.linkedin.com/in/aacaron/"><FontAwesomeIcon icon={faLinkedinIn}/></a></li>
+          <li><a aria-label="Antoine Caron GitHub" href="https://github.com/Nubunduram"><FontAwesomeIcon icon={faGithub}/></a></li>
         </ul>
       </nav>
       <p>

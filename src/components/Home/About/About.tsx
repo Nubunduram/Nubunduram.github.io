@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import "./_About.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   const [paragraphIndex, setParagraphIndex] = useState(0);
@@ -49,8 +51,8 @@ const About = () => {
     <section className="about" id="about">
       <p>{paragraphs[paragraphIndex]}</p>
       <div className='buttons'>
-        <button aria-label="Previous quote" onClick={handlePrevious}><i className="fa-solid fa-2x fa-arrow-left"></i></button>
-        <button aria-label="Next quote" onClick={handleNext}><i className="fa-solid fa-2x fa-arrow-right"></i></button>
+        <button aria-label="Previous quote" onClick={handlePrevious}><FontAwesomeIcon icon={faArrowLeft} size='2x' /></button>
+        <button aria-label="Next quote" onClick={handleNext}><FontAwesomeIcon icon={faArrowRight} size='2x' /></button>
       </div>
     </section>
   );
