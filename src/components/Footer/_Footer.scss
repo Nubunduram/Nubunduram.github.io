@@ -2,7 +2,7 @@
 @import "../../styles/variables";
 
 footer {
-    background-color: $default-green;
+    background-color: $default-gray;
     color: $default-white;
     flex: 1;
 
@@ -12,6 +12,9 @@ footer {
 
     a:hover {
         text-decoration: underline;
+    }
+
+    .social-list a:hover {
         font-size: calc(1em * 1.25);
     }
 
@@ -34,7 +37,7 @@ footer {
 
     p {
         text-align: center;
-        padding: 24px 0 64px;
+        padding: 24px 0;
     }
 }
 

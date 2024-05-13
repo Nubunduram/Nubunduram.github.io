@@ -8,7 +8,7 @@ const Contact = () => {
           let's connect
         </h2>
         <p>
-          Feel free to reach out if you're interested in working together, You can also email me at <a href="mailto:caron.antoine.pro@gmail.com?subject=Subject%20Here&body=Your%20message%20here">caron.antoine.pro@gmail.com</a>. All fields are required!
+          Feel free to reach out if you're interested in working together, You can also email me <a href="mailto:caron.antoine.pro@gmail.com">Here<span>.</span></a> All fields are required!
         </p>
       </header>
 

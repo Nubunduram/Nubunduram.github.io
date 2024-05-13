@@ -1,14 +1,12 @@
-// Default Light Mode Colors
-$default-gray: rgb(76, 76, 76);
-$default-white: #fff;
+// Initial text color (only light mode)
+$dark-blue: rgb(29, 32, 41);
 $default-black: #000;
-$default-green: rgb(168, 192, 164);
-
-// blue: 42,53,75
-//gray: 239, 240, 242
-
-$light-gray: rgb(111, 111, 111);
-$dark-green: rgb(78, 95, 84);
+// Both
+// $default-white: #fff;
+$default-white: #fff;
+$default-blue: rgb(42, 53, 75);
+$default-gray: rgb(42, 53, 75);
+$default-red: #ee6c4d;
 
 // Font-size
 $font-xs: 1rem;

@@ -53,7 +53,7 @@
         position: sticky;
         top: 0;
         z-index: 999;
-        background-color: rgb(255, 255, 255, 0.7);
+        background-color: rgb(#fff, 0.7);
 
 
         nav .navigation {
@@ -62,7 +62,7 @@
             border-radius: $medium-radius;
             gap: 0;
             border: solid 2px $default-gray;
-            background-color: rgb(255, 255, 255, 0.7);
+            background-color: rgb(#fff, 0.7);
             align-items: end;
 
             ul {
@@ -99,13 +99,8 @@
 }
 
 .general-header .navigation ul li:hover {
-    filter: blur(0px);
     font-weight: 400;
     color: $default-white;
-    background-color: $default-green;
+    background-color: $default-blue;
     border-radius: $small-radius;
-}
-
-.general-header .navigation ul:hover li:not(:hover) {
-    filter: blur(0.6px);
 }

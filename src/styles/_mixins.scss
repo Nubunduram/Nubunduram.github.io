@@ -22,3 +22,9 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin paragraph-text-center {
+    hyphens: auto;
+    text-align: justify;
+    text-align-last: center;
+}

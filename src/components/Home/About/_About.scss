@@ -5,13 +5,14 @@
 .about {
     @include general-width-setter;
     @include flex-setter(column, center, center);
-    text-align: center;
+    @include paragraph-text-center;
     height: 300px;
 
     p {
-        max-width: 750px;
+        width: 750px;
+        max-width: 95%;
         padding: 8px;
-        @include grid-content-center;
+        @include grid-items-center;
         flex: 1;
     }
 
@@ -23,7 +24,7 @@
 
             &:hover {
                 transform: scale(1.15);
-                color: $default-green;
+                color: $default-red;
             }
 
             &:active {
@@ -31,5 +32,11 @@
                 color: inherit;
             }
         }
+    }
+}
+
+@media only screen and (400px < width < 768px) {
+    .about {
+        margin-top: -15dvw;
     }
 }
