@@ -6,8 +6,9 @@ const HomeHeader = () => {
       <div className="img-container">
         <picture>
           <source srcSet="./assets/home-header.webp" type="image/webp" />
-          <img width={720} height={720} src="./assets/home-header.jpg" alt="Green plant with light green background" />
-        </picture>      </div>
+          <img width={720} height={720} src="./assets/home-header.jpg" alt="A toy boat on the beach" />
+        </picture>
+      </div>
       <h1>
         <span className="name" id="name">Antoine</span>
         <span className="last-name" id="last-name">Caron</span>
