@@ -24,6 +24,11 @@ footer {
         padding: 24px 0;
         @include flex-setter($init, space-between, center);
 
+        .logo {
+            width: 72px;
+            cursor: pointer;
+        }
+
         ul {
             display: flex;
             gap: 16px;
