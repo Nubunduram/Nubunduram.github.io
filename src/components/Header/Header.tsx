@@ -3,11 +3,11 @@ import { useState } from 'react';
 import "./_Header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import lightLogo from "/assets/logo-light.png";
-import darkLogo from "/assets/logo-dark.png";
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 import { scrollToTop } from "../../utils/scrollToTop";
 
+const darkLogo = "/assets/logo-dark.png";
+const lightLogo = "/assets/logo-light.png";
 
 interface DarkModeProps {
   isDarkMode: boolean;

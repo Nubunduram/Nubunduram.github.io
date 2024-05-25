@@ -2,9 +2,11 @@ import "./_Footer.scss";
 import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
-import lightLogo from "/assets/logo-light.png";
-import darkLogo from "/assets/logo-dark.png";
 import { scrollToTop } from "../../utils/scrollToTop";
+
+const darkLogo = "/assets/logo-dark.png";
+const lightLogo = "/assets/logo-light.png";
+
 
 interface DarkModeProps {
   isDarkMode: boolean;
