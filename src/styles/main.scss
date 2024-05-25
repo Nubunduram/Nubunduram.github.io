@@ -15,6 +15,7 @@
 html {
   font-size: 16px;
   color: $default-blue;
+  overflow-x: hidden;
 
   @media screen and (768px < width) {
     font-size: 18px;

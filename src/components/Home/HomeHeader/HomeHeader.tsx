@@ -1,4 +1,7 @@
 import "./_HomeHeader.scss";
+import VisitCard from "./VisitCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const HomeHeader = () => {
   return (
@@ -9,11 +12,11 @@ const HomeHeader = () => {
           <img width={720} height={720} src="./assets/home-header.jpg" alt="A toy boat on the beach" />
         </picture>
       </div>
-      <h1>
-        <span className="name" id="name">Antoine</span>
-        <span className="last-name" id="last-name">Caron</span>
-        <span className="job-title" id="job-title">Web Developer</span>
-      </h1>
+      <p>
+        <span>PULL ME</span>
+        <FontAwesomeIcon icon={faArrowRight} />
+      </p>
+      <VisitCard />
     </header>
   )
 }

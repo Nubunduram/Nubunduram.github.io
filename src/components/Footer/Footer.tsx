@@ -4,20 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { scrollToTop } from "../../utils/scrollToTop";
 
-const darkLogo = "/assets/logo-dark.png";
-const lightLogo = "/assets/logo-light.png";
 
 
-interface DarkModeProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-const Footer = ({ isDarkMode }: DarkModeProps) => {
+const Footer = () => {
   return (
     <footer>
       <nav>
-        <img onClick={scrollToTop} alt="logo" className="logo" src={isDarkMode ? darkLogo : lightLogo} />
+        <img onClick={scrollToTop} alt="logo" className="logo" src={"/assets/logo-dark.png"} />
         <ul className="nav-list">
           <li><Link to="/#home">Home</Link></li>
           <li><Link to="/#about">About</Link></li>

@@ -1,0 +1,63 @@
+@import "../../../styles/variables";
+
+$card-padding: 30px;
+$card-width: 500px;
+$card-height: 300px;
+
+.home-header {
+    position: relative;
+}
+
+.card-container {
+    cursor: grab;
+    color: $default-black;
+    position: absolute;
+    top: calc(50% - $card-height/2);
+    right: calc(0px - $card-width + 100px);
+    height: $card-height;
+    width: $card-width;
+    font-family: urw-form, Arial, Helvetica, sans-serif;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &__text {
+        position: absolute;
+        padding: $card-padding;
+        top: 0;
+        left: 0;
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 0.9;
+
+        &__job {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: $card-padding;
+        display: flex;
+        justify-content: space-between;
+        width: calc($card-width - $card-padding * 2);
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: $card-padding;
+        cursor: pointer;
+    }
+}

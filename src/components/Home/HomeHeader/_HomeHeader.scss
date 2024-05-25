@@ -22,7 +22,7 @@
             }
         }
 
-        h1 {
+        p {
             width: 100%;
             max-width: 500px;
             display: block;
@@ -32,28 +32,6 @@
             transform: translateX(-50%);
             text-align: center;
             margin-top: 16px;
-
-            * {
-                display: block;
-            }
-
-            .name,
-            .last-name {
-                line-height: 1;
-                text-transform: uppercase;
-            }
-
-            .name {
-                margin-right: 55px;
-            }
-
-            .last-name {
-                margin-left: 100px;
-            }
-
-            .job-title {
-                font-weight: 300;
-            }
         }
     }
 }
@@ -74,35 +52,12 @@
             }
         }
 
-        h1 {
+        p {
             @include grid-content-center;
+            place-items: center;
+            text-align: center;
             width: 50%;
-            grid-template-columns: 1fr;
-
-            .name,
-            .last-name {
-                text-align: center;
-                line-height: 0.9;
-                text-transform: uppercase;
-            }
-
-            .name {
-                margin-left: -55px;
-            }
-
-            .last-name {
-                margin-left: 100px;
-            }
-
-            .job-title {
-                text-align: center;
-                font-weight: 300;
-            }
+            font-size: 3rem;
         }
     }
-}
-
-
-.job-title {
-    font-size: calc(1em/2);
 }

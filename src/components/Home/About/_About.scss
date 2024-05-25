@@ -3,10 +3,11 @@
 
 
 .about {
-    @include general-width-setter;
+    @include general-width-setter($max-width: 100%);
     @include flex-setter(column, center, center);
     @include paragraph-text-center;
     height: 300px;
+    
 
     p {
         width: 750px;

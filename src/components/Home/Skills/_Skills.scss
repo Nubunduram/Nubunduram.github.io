@@ -1,69 +1,161 @@
 @import "../../../styles/mixins";
 @import "../../../styles/variables";
+@import "../../../styles/animations";
 
 .skills-section {
     background-color: $default-blue;
     color: $default-white;
-    padding: 32px 0;
+    padding: 64px 0;
     text-align: center;
 
     h2 {
+        display: none;
+    }
+
+    h3 {
         margin-bottom: 32px;
     }
 
-    ul {
+    .skills-grid {
         @include general-width-setter;
-        @include grid-items-center;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 16px;
-        border-radius: $small-radius;
+        @include grid-content-center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-        li {
+    .circle-shadow {
+        @include general-width-setter($max-width: 400px);
+        aspect-ratio: 1/1;
+        border-radius: $circle-radius;
+        cursor: grab;
+        color: $default-white;
+
+        &:active {
+            position: absolute;
+            cursor: grabbing;
+            z-index: 2;
+        }
+
+        .circle {
             position: relative;
-            width: 100px;
-            height: 100px;
-            @include grid-items-center;
-            border-radius: $medium-radius;
-            background-color: rgba($default-white, 0.9);
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
 
-            p {
-                width: inherit;
-                height: inherit;
-                padding: inherit;
-                border-radius: inherit;
-                place-content: center;
+            li {
+                z-index: 5;
+                cursor: initial;
                 position: absolute;
-                opacity: 0;
-                top: 0;
-                left: 0;
-                transition: 0.2s;
+
+                &:nth-child(1) {
+                    top: 10%;
+                    left: calc(50% - 50px)
+                }
+
+                &:nth-child(2) {
+                    left: 10%;
+                    top: calc(50% - 50px);
+                }
+
+                &:nth-child(3) {
+                    right: 10%;
+                    top: calc(50% - 50px);
+                }
+
+                &:nth-child(4) {
+                    bottom: 10%;
+                    left: calc(50% - 50px)
+                }
+
+                div {
+                    position: relative;
+                    @include grid-items-center;
+                    border-radius: $medium-radius;
+                    background-color: rgba($default-white, 0.9);
+                    width: 100px;
+                    height: 100px;
+
+                    p {
+                        width: inherit;
+                        height: inherit;
+                        padding: inherit;
+                        border-radius: inherit;
+                        place-content: center;
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        left: 0;
+                        transition: 0.2s;
+                    }
+
+                    &:hover p {
+                        display: grid;
+                        opacity: 1;
+                        background: rgba($default-blue, 0.8);
+                    }
+                }
             }
 
-            &:hover p {
-                display: grid;
-                opacity: 1;
-                background: rgba($default-blue, 0.8);
+            .cross {
+                color: rgba($default-white, 0.3);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 400px;
+                font-weight: 100;
+            }
+
+        }
+    }
+
+    .front-end .circle-shadow {
+        box-shadow: 0px -8px 16px 1px rgba($default-red, 0.5);
+        animation: box-shadow-glow 2.5s infinite;
+        background-color: rgba($default-red, 0.7);
+        @include box-shadow-glow-animation($color: $default-red, $time: 10s);
+
+        .circle {
+
+            li {
+                animation: opposite-rotation 15s infinite linear;
             }
         }
     }
-}
 
-@media screen and (768px < width) {
-    .skills-section ul {
-        width: 450px;
-        grid-template-columns: repeat(4, minmax(100px, 1fr));
-    }
-}
+    .back-end .circle-shadow {
+        box-shadow: 0px -8px 16px 1px rgba($default-blue, 0.5);
+        background-color: rgba($default-blue, 0.7);
+        position: absolute;
+        z-index: 1;
+        @include box-shadow-glow-animation($color: $default-blue, $time: 10s);
 
-@media screen and (1440px < width) {
-    .skills-section ul {
-        width: fit-content;
-        grid-template-columns: repeat(6, 100px);
-    }
-}
+        &:active {
+            .circle {
+                animation: rotation 15s infinite linear;
 
-@media screen and (1800px < width) {
-    .skills-section ul {
-        grid-template-columns: repeat(12, 100px);
+                li {
+                    animation: opposite-rotation 15s infinite linear;
+                }
+            }
+        }
     }
+
+    .tools .circle-shadow {
+        box-shadow: 0px -8px 16px 1px rgba(rgb(255, 255, 0), 0.5);
+        animation: box-shadow-glow 2.5s infinite;
+        background-color: rgba(rgba(rgb(255, 255, 0), 0.5), 0.6);
+
+        .circle {
+            animation: opposite-rotation 15s infinite linear;
+
+            li {
+                animation: rotation 15s infinite linear;
+            }
+        }
+    }
+
+
+
+
+
 }

@@ -1,6 +1,6 @@
 @import "./variables";
 
-@mixin general-width-setter ($width : 90%) {
+@mixin general-width-setter ($max-width: $max-width, $width : 90%) {
     max-width: $max-width;
     width: $width;
     margin: auto;
