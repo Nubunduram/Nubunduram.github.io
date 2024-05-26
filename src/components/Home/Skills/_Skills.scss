@@ -4,8 +4,6 @@
 
 @include box-shadow-glow(default-blue, $default-blue);
 @include box-shadow-glow(default-red, $default-red);
-@include box-shadow-glow(yellow, yellow);
-
 
 .skills-section {
     background-color: $default-blue;
@@ -113,19 +111,6 @@
         }
     }
 
-    .front-end .circle-shadow {
-        background-color: rgba($default-red, 0.7);
-        animation: box-shadow-glow-default-red 10s infinite;
-
-        .circle {
-            animation: rotation 15s infinite linear;
-
-            li {
-                animation: opposite-rotation 15s infinite linear;
-            }
-        }
-    }
-
     .back-end .circle-shadow {
         background-color: rgba($default-blue, 0.7);
         position: relative;
@@ -143,16 +128,11 @@
         }
     }
 
+    .front-end .circle-shadow {
+        @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: right)
+    }
+
     .tools .circle-shadow {
-        background-color: rgba(rgba(rgb(255, 255, 0), 0.5), 0.6);
-        animation: box-shadow-glow-yellow 10s infinite;
-
-        .circle {
-            animation: opposite-rotation 15s infinite linear;
-
-            li {
-                animation: rotation 15s infinite linear;
-            }
-        }
+        @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: left)
     }
 }

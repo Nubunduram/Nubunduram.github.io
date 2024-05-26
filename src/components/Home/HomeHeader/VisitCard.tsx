@@ -13,7 +13,7 @@ const VisitCard = () => {
             <div className="card">
                 <img src={"/assets/visit-card.png"} alt="card" className="card__image" />
                 <h1 className="card__text">Antoine<br />Caron<br /><span className="card__text__job">Full-Stack Developer</span></h1>
-                <ul className="card__nav">
+                <ul className="card__contact">
                     <li>+33 6 51 63 02 16</li>
                     <li>caron.antoine.pro@gmail.com</li>
                 </ul>

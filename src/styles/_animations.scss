@@ -1,11 +1,10 @@
-@keyframes errorAnimation {
+@keyframes error-animation {
   0% {
     color: $default-red;
   }
 
   25% {
     color: $default-red;
-
   }
 
   50% {
@@ -110,5 +109,35 @@
       box-shadow: 0px 0px 16px 16px rgba($color-value, 0.5);
 
     }
+  }
+}
+
+@keyframes pull-me-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  40% {
+    transform: translateX(40px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translate(90px);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

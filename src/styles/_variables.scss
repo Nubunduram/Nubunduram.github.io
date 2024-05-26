@@ -25,3 +25,12 @@ $small-radius: 5px;
 $medium-radius: 15px;
 $big-radius: 25px;
 $circle-radius: 100%;
+
+// Visit-Card
+$card-padding: 30px;
+$card-width: 500px;
+$card-height: 300px;
+// sm Visit-card
+$sm-card-padding: calc(($card-padding/2));
+$sm-card-width: calc(($card-width/2 - 32px));
+$sm-card-height: calc(($card-height/2 - 32px));

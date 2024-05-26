@@ -1,11 +1,50 @@
 @import "../../../styles/mixins";
 @import "../../../styles/variables";
+@import "../../../styles/animations";
+
+#home .home-header {
+    @include general-width-setter;
+    position: relative;
+
+    .img-container {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .pull-and-card {
+        @include grid-content-center;
+        place-items: center;
+        width: 50%;
+        font-size: 3rem;
+        position: relative;
+
+        span {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 100;
+
+            .letter {
+                animation: error-animation 2.5s infinite;
+            }
+
+            @for $i from 1 through 5 {
+                $delay: 0.25s * ($i);
+
+                .letter-#{$i} {
+                    animation-delay: $delay;
+                }
+            }
+        }
+
+        svg {
+            animation: pull-me-animation 5s infinite;
+        }
+    }
+}
 
 @media screen and (width <=768px) {
     #home .home-header {
-        @include general-width-setter;
-        @include grid-content-center;
-        position: relative;
 
         .img-container {
             min-width: 80%;
@@ -17,28 +56,23 @@
 
             img {
                 height: 50%;
-                width: 100%;
-                object-fit: cover;
             }
         }
 
-        p {
-            width: 100%;
-            max-width: 500px;
-            display: block;
+        .pull-and-card {
+            @include general-width-setter(500px, 100%);
+            display: grid;
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
             transform: translateX(-50%);
-            text-align: center;
-            margin-top: 16px;
         }
+
     }
 }
 
 @media screen and (768px < width) {
     #home .home-header {
-        @include general-width-setter;
         @include flex-setter($init, space-between);
         padding: 36px 0;
 
@@ -47,15 +81,12 @@
 
             img {
                 height: auto;
-                width: 100%;
-                object-fit: cover;
             }
         }
 
-        p {
+        .pull-and-card {
             @include grid-content-center;
             place-items: center;
-            text-align: center;
             width: 50%;
             font-size: 3rem;
         }
