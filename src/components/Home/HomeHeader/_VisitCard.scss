@@ -55,6 +55,17 @@
             margin: $card-padding;
             cursor: pointer;
         }
+
+        &__resume {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: calc($card-padding + $logo-height) $card-padding;
+            font-size: 0.7rem;
+            text-decoration: underline;
+            width: $logo-width;
+            text-align: center;
+        }
     }
 }
 
@@ -88,8 +99,6 @@
             }
 
             &__contact {
-                bottom: 0;
-                left: 0;
                 padding: $sm-card-padding;
                 width: calc($sm-card-width - $sm-card-padding * 2);
             }
@@ -97,9 +106,13 @@
             &__logo {
                 height: auto;
                 width: 48px;
-                top: 0;
-                right: 0;
                 margin: $sm-card-padding;
+            }
+
+            &__resume {
+                margin: calc($sm-card-padding + $sm-logo-height) $sm-card-padding;
+                font-size: 0.5rem;
+                width: $sm-logo-width;
             }
         }
     }

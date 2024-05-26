@@ -30,7 +30,12 @@ $circle-radius: 100%;
 $card-padding: 30px;
 $card-width: 500px;
 $card-height: 300px;
+$logo-height: 41px;
+$logo-width: 72px;
+
 // sm Visit-card
 $sm-card-padding: calc(($card-padding/2));
 $sm-card-width: calc(($card-width/2 - 32px));
 $sm-card-height: calc(($card-height/2 - 32px));
+$sm-logo-height: 27px;
+$sm-logo-width: 48px;

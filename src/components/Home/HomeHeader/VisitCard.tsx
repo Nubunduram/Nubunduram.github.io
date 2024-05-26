@@ -18,6 +18,7 @@ const VisitCard = () => {
                     <li>caron.antoine.pro@gmail.com</li>
                 </ul>
                 <img className="card__logo" width={72} height={41} src="/assets/logo-light.png" />
+                <p className="card__resume">Download Resume</p>
             </div>
         </motion.div>
     )
