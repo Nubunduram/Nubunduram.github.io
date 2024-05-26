@@ -78,23 +78,6 @@
   }
 }
 
-@mixin box-shadow-glow-animation($color: $color, $time: 10s) {
-  @keyframes box-shadow-glow {
-    0% {
-      box-shadow: 0px -8px 8px 1px $color;
-    }
-
-    50% {
-      box-shadow: 0px -16px 16px 1px rgba($color, 0.3);
-    }
-
-    100% {
-      box-shadow: 0px -8px 8px 1px $color;
-    }
-  }
-  animation: box-shadow-glow $time infinite;
-}
-
 @keyframes opposite-rotation {
   0% {
     transform: rotate(0deg);
@@ -102,5 +85,30 @@
 
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@mixin box-shadow-glow($color-name, $color-value) {
+  @keyframes box-shadow-glow-#{$color-name} {
+    0% {
+      box-shadow: 0px 0px 16px 16px rgba($color-value, 0.5);
+    }
+
+    33% {
+      box-shadow: 0px 0px 8px 8px rgba($color-value, 0.5);
+    }
+
+    50% {
+      box-shadow: 0px 0px 16px 35px rgba($color-value, 0.3);
+    }
+
+    66% {
+      box-shadow: 0px 0px 8px 8px rgba($color-value, 0.5);
+    }
+
+    100% {
+      box-shadow: 0px 0px 16px 16px rgba($color-value, 0.5);
+
+    }
   }
 }

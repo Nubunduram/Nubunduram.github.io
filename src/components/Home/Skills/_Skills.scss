@@ -2,6 +2,11 @@
 @import "../../../styles/variables";
 @import "../../../styles/animations";
 
+@include box-shadow-glow(default-blue, $default-blue);
+@include box-shadow-glow(default-red, $default-red);
+@include box-shadow-glow(yellow, yellow);
+
+
 .skills-section {
     background-color: $default-blue;
     color: $default-white;
@@ -109,12 +114,11 @@
     }
 
     .front-end .circle-shadow {
-        box-shadow: 0px -8px 16px 1px rgba($default-red, 0.5);
-        animation: box-shadow-glow 2.5s infinite;
         background-color: rgba($default-red, 0.7);
-        @include box-shadow-glow-animation($color: $default-red, $time: 10s);
+        animation: box-shadow-glow-default-red 10s infinite;
 
         .circle {
+            animation: rotation 15s infinite linear;
 
             li {
                 animation: opposite-rotation 15s infinite linear;
@@ -123,11 +127,10 @@
     }
 
     .back-end .circle-shadow {
-        box-shadow: 0px -8px 16px 1px rgba($default-blue, 0.5);
         background-color: rgba($default-blue, 0.7);
-        position: absolute;
+        position: relative;
         z-index: 1;
-        @include box-shadow-glow-animation($color: $default-blue, $time: 10s);
+        animation: box-shadow-glow-default-blue 10s infinite;
 
         &:active {
             .circle {
@@ -141,9 +144,8 @@
     }
 
     .tools .circle-shadow {
-        box-shadow: 0px -8px 16px 1px rgba(rgb(255, 255, 0), 0.5);
-        animation: box-shadow-glow 2.5s infinite;
         background-color: rgba(rgba(rgb(255, 255, 0), 0.5), 0.6);
+        animation: box-shadow-glow-yellow 10s infinite;
 
         .circle {
             animation: opposite-rotation 15s infinite linear;
@@ -153,9 +155,4 @@
             }
         }
     }
-
-
-
-
-
 }
