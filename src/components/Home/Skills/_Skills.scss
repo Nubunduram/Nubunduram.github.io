@@ -5,134 +5,184 @@
 @include box-shadow-glow(default-blue, $default-blue);
 @include box-shadow-glow(default-red, $default-red);
 
-.skills-section {
-    background-color: $default-blue;
-    color: $default-white;
-    padding: 64px 0;
-    text-align: center;
+$li-width: 76px;
+$cross-font-size: 330px;
+$stack-font-size: 0.9rem;
+$template-column: 1fr 1fr 1fr;
 
-    h2 {
-        display: none;
+@mixin circle-li-position($index, $li-width) {
+    @if $index ==1 {
+        top: 10%;
+        left: calc(50% - #{$li-width} / 2);
     }
 
-    h3 {
-        margin-bottom: 32px;
+    @else if $index ==2 {
+        left: 10%;
+        top: calc(50% - #{$li-width} / 2);
     }
 
-    .skills-grid {
-        @include general-width-setter;
-        @include grid-content-center;
-        grid-template-columns: 1fr 1fr 1fr;
+    @else if $index ==3 {
+        right: 10%;
+        top: calc(50% - #{$li-width} / 2);
     }
 
-    .circle-shadow {
-        @include general-width-setter($max-width: 400px);
-        aspect-ratio: 1/1;
-        border-radius: $circle-radius;
-        cursor: grab;
-        color: $default-white;
-
-        &:active {
-            position: absolute;
-            cursor: grabbing;
-            z-index: 2;
-        }
-
-        .circle {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-
-            li {
-                z-index: 5;
-                cursor: initial;
-                position: absolute;
-
-                &:nth-child(1) {
-                    top: 10%;
-                    left: calc(50% - 50px)
-                }
-
-                &:nth-child(2) {
-                    left: 10%;
-                    top: calc(50% - 50px);
-                }
-
-                &:nth-child(3) {
-                    right: 10%;
-                    top: calc(50% - 50px);
-                }
-
-                &:nth-child(4) {
-                    bottom: 10%;
-                    left: calc(50% - 50px)
-                }
-
-                div {
-                    position: relative;
-                    @include grid-items-center;
-                    border-radius: $medium-radius;
-                    background-color: rgba($default-white, 0.9);
-                    width: 100px;
-                    height: 100px;
-
-                    p {
-                        width: inherit;
-                        height: inherit;
-                        padding: inherit;
-                        border-radius: inherit;
-                        place-content: center;
-                        position: absolute;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        transition: 0.2s;
-                    }
-
-                    &:hover p {
-                        display: grid;
-                        opacity: 1;
-                        background: rgba($default-blue, 0.8);
-                    }
-                }
-            }
-
-            .cross {
-                color: rgba($default-white, 0.3);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 400px;
-                font-weight: 100;
-            }
-
-        }
-    }
-
-    .back-end .circle-shadow {
-        background-color: rgba($default-blue, 0.7);
-        position: relative;
-        z-index: 1;
-        animation: box-shadow-glow-default-blue 10s infinite;
-
-        &:active {
-            .circle {
-                animation: rotation 15s infinite linear;
-
-                li {
-                    animation: opposite-rotation 15s infinite linear;
-                }
-            }
-        }
-    }
-
-    .front-end .circle-shadow {
-        @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: right)
-    }
-
-    .tools .circle-shadow {
-        @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: left)
+    @else if $index ==4 {
+        bottom: 10%;
+        left: calc(50% - #{$li-width} / 2);
     }
 }
+
+@mixin circle-shadow-style($background-color, $animation) {
+    background-color: $background-color;
+    position: relative;
+    z-index: 1;
+    animation: $animation 10s infinite;
+
+    &:active .circle {
+        animation: rotation 15s infinite linear;
+
+        li {
+            animation: opposite-rotation 15s infinite linear;
+        }
+    }
+}
+
+@mixin skill-section-styles($li-width, $cross-font-size, $stack-font-size, $template-column) {
+    .skills-section {
+        background-color: $default-blue;
+        color: $default-white;
+        padding: 32px 0 64px 0;
+        text-align: center;
+
+        h2 {
+            display: none;
+        }
+
+        h3 {
+            margin: 32px 0;
+        }
+
+        .skills-grid {
+            @include general-width-setter;
+            @include grid-content-center;
+            grid-template-columns: $template-column;
+        }
+
+        .circle-shadow {
+            @include general-width-setter($max-width: 400px);
+            aspect-ratio: 1/1;
+            border-radius: $circle-radius;
+            cursor: grab;
+            color: $default-white;
+
+            &:active {
+                position: relative;
+                cursor: grabbing;
+                z-index: 2;
+            }
+
+            .circle {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+
+                li {
+                    z-index: 5;
+                    cursor: initial;
+                    position: absolute;
+                    width: $li-width;
+                    height: $li-width;
+
+                    @for $i from 1 through 4 {
+                        &:nth-child(#{$i}) {
+                            @include circle-li-position($i, $li-width);
+                        }
+                    }
+
+                    div {
+                        position: relative;
+                        @include grid-items-center;
+                        border-radius: $medium-radius;
+                        background-color: rgba($default-white, 0.9);
+                        width: 100%;
+                        height: 100%;
+
+                        svg {
+                            width: 90%;
+                            height: 90%;
+                        }
+
+                        p {
+                            width: inherit;
+                            height: inherit;
+                            padding: inherit;
+                            border-radius: inherit;
+                            place-content: center;
+                            position: absolute;
+                            opacity: 0;
+                            top: 0;
+                            left: 0;
+                            transition: 0.2s;
+                            font-size: $stack-font-size;
+                        }
+
+                        &:hover p {
+                            display: grid;
+                            opacity: 1;
+                            background: rgba($default-blue, 0.8);
+                        }
+                    }
+                }
+
+                .cross {
+                    color: rgba($default-white, 0.3);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: $cross-font-size;
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .back-end .circle-shadow {
+            @include circle-shadow-style(rgba($default-blue, 0.7), box-shadow-glow-default-blue);
+        }
+
+        .front-end .circle-shadow {
+            @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: right);
+        }
+
+        .tools .circle-shadow {
+            @include skill-circle($color: $default-red, $animation: box-shadow-glow-default-red, $direction: left);
+        }
+    }
+}
+
+@mixin responsive-skill-section-styles {
+    @include skill-section-styles($li-width, $cross-font-size, $stack-font-size, 1fr);
+
+    @media screen and (min-width: 425px) {
+        @include skill-section-styles(100px, 400px, 1rem, 1fr);
+    }
+
+    @media screen and (min-width: 600px) {
+        @include skill-section-styles(46px, 250px, 0.6rem, $template-column);
+    }
+
+    @media screen and (min-width: 768px) {
+        @include skill-section-styles(60px, 360px, 0.8rem, $template-column);
+    }
+
+    @media screen and (min-width: 1024px) {
+        @include skill-section-styles($li-width, 425px, $stack-font-size, $template-column);
+    }
+
+    @media screen and (min-width: 1440px) {
+        @include skill-section-styles(100px, 400px, 1rem, $template-column);
+    }
+}
+
+@include responsive-skill-section-styles;
