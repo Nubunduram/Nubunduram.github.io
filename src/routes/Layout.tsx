@@ -39,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <>
             <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             {children}
-            <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <Footer />
         </>
     );
 }
