@@ -18,7 +18,7 @@ const VisitCard = () => {
                     <li>caron.antoine.pro@gmail.com</li>
                 </ul>
                 <img className="card__logo" width={72} height={41} src="/assets/logo-light.png" />
-                <a href="/assets/CV_ENG_2705.pdf" className="card__resume" download>Download resume</a>
+                {/* <a href="/assets/CV_ENG_2705.pdf" className="card__resume" download>Download resume</a> */}
             </div>
         </motion.div>
     )

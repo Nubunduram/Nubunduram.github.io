@@ -55,16 +55,16 @@
             margin: $card-padding;
         }
 
-        &__resume {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: calc($card-padding + $logo-height) $card-padding;
-            font-size: 0.7rem;
-            text-decoration: underline;
-            width: $logo-width;
-            text-align: center;
-        }
+        // &__resume {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     margin: calc($card-padding + $logo-height) $card-padding;
+        //     font-size: 0.7rem;
+        //     text-decoration: underline;
+        //     width: $logo-width;
+        //     text-align: center;
+        // }
     }
 }
 
@@ -108,11 +108,11 @@
                 margin: $sm-card-padding;
             }
 
-            &__resume {
-                margin: calc($sm-card-padding + $sm-logo-height) $sm-card-padding;
-                font-size: 0.5rem;
-                width: $sm-logo-width;
-            }
+            // &__resume {
+            //     margin: calc($sm-card-padding + $sm-logo-height) $sm-card-padding;
+            //     font-size: 0.5rem;
+            //     width: $sm-logo-width;
+            // }
         }
     }
 }
